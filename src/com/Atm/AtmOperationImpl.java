@@ -6,13 +6,12 @@ import java.util.Map;
 public class AtmOperationImpl implements AtmOperationInterf{
     ATM atm=new ATM();
     Map<Double,String> ministmt=new HashMap<>();
-    @Override
+  
     public void viewBalance() {
         System.out.println("Available Balance is : "+atm.getBalance());
 
     }
 
-    @Override
     public void withdrawAmount(double withdrawAmount) {
         if(withdrawAmount%500==0) {
             if (withdrawAmount <= atm.getBalance()) {
@@ -30,7 +29,7 @@ public class AtmOperationImpl implements AtmOperationInterf{
 
          }
 
-    @Override
+  
     public void depositAmount(double depositAmount) {
         ministmt.put(depositAmount," Amount Deposited");
         System.out.println(depositAmount+" Deposited Successfully !!");
@@ -39,10 +38,11 @@ public class AtmOperationImpl implements AtmOperationInterf{
 
              }
 
-    @Override
+  
     public void viewMiniStatement() {
         for(Map.Entry<Double,String> m:ministmt.entrySet()){
             System.out.println(m.getKey()+"  "+m.getValue());
                 }
              }
           }
+
