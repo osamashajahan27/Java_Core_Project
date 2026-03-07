@@ -6,3 +6,4 @@ public interface AtmOperationInterf {
     public void depositAmount(double depositAmount );
     public  void viewMiniStatement();
 }
+
